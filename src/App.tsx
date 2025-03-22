@@ -9,9 +9,18 @@ function App() {
   );
 }
  
+// function LikeButton() {
+//   // spanタグ...囲った部分をインライン要素としてグループ化
+//   return <span>いいねボタン予定地</span>;
+// }
+
 function LikeButton() {
-  // spanタグ...囲った部分をインライン要素としてグループ化
-  return <span>いいねボタン予定地</span>;
+  const count = 999;
+  // {}で囲むことで、JavaScriptの式を埋め込むことができる
+  // return <span>♥ {count}</span>;
+
+  // CSSを適用するために、className属性を追加
+  return <span className="likeButton">♥ {count}</span>;
 }
  
 export default App;
