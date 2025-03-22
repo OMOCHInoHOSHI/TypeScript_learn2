@@ -17,7 +17,10 @@ function App() {
 function LikeButton() {
   const count = 999;
   // {}で囲むことで、JavaScriptの式を埋め込むことができる
-  return <span>♥ {count}</span>;
+  // return <span>♥ {count}</span>;
+
+  // CSSを適用するために、className属性を追加
+  return <span className="likeButton">♥ {count}</span>;
 }
  
 export default App;
