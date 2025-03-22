@@ -3,9 +3,14 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>TypeScriptはいいぞ</h1>
+      <LikeButton />
     </>
   );
+}
+ 
+function LikeButton() {
+  // spanタグ...囲った部分をインライン要素としてグループ化
+  return <span>いいねボタン予定地</span>;
 }
  
 export default App;
