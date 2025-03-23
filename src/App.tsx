@@ -1,5 +1,8 @@
+// npm run devで実行
+
 import "./App.css";
- 
+import { useState } from "react";
+
 function App() {
   return (
     <>
@@ -14,13 +17,30 @@ function App() {
 //   return <span>いいねボタン予定地</span>;
 // }
 
-function LikeButton() {
-  const count = 999;
-  // {}で囲むことで、JavaScriptの式を埋め込むことができる
-  // return <span>♥ {count}</span>;
+// function LikeButton() {
+//   const count = 999;
+//   // {}で囲むことで、JavaScriptの式を埋め込むことができる
+//   // return <span>♥ {count}</span>;
 
-  // CSSを適用するために、className属性を追加
-  return <span className="likeButton">♥ {count}</span>;
-}
+//   // CSSを適用するために、className属性を追加
+//   return <span className="likeButton">♥ {count}</span>;
+// }
  
+
+// useStateは関数コンポーネントに状態を持たせるためのReactの機能
+// useStateの戻り値をcountとsetCountの2つの変数に代入しています。countには999のような値が代入され、setCountにはcountの値を変更する関数が代入されます。
+function LikeButton() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <span className="likeButton" onClick={handleClick}>
+      ♥ {count}
+    </span>
+  );
+}
+
 export default App;
