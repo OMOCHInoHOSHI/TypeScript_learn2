@@ -30,7 +30,7 @@ function App() {
 // useStateは関数コンポーネントに状態を持たせるためのReactの機能
 // useStateの戻り値をcountとsetCountの2つの変数に代入しています。countには999のような値が代入され、setCountにはcountの値を変更する関数が代入されます。
 function LikeButton() {
-  const [count, setCount] = useState(999);
+  const [count, setCount] = useState(0);
 
   const handleClick = () => {
     setCount(count + 1);
